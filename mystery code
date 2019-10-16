@@ -1,0 +1,19 @@
+#### Mystery code ####
+#i dont know what this is and neither do u
+
+attach(Legit_data)
+library(ggplot2)
+
+mayonaise <- ggplot(data = Legit_data, aes(x = `Median age (cal BP)`, y = `Foram percentage`, col = `Apron Location`))
+
+mayonaise + geom_smooth(method="lm") + geom_point()
+
+cut <- lm(`Foram percentage`~ `Median age (cal BP)` * `Apron Location`)
+
+coef(cut)
+
+#time to check
+mayonaise + geom_smooth(method="lm") + geom_point() +
+  geom_abline(aes (inherit.aes = TRUE), slope =  (0.002099947), intercept = (  7.420792237)) + #central
+  geom_abline(aes (inherit.aes = TRUE), slope =  (0.002099947 + -0.004670315), intercept = (  7.420792237 + 12.416102105)) + #reef edge
+  geom_abline(aes (inherit.aes = TRUE), slope =  (0.002099947 + -0.004892474), intercept = (  7.420792237 + 6.960738533))  #lagoon adjacent
