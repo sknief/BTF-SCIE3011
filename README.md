@@ -9,5 +9,5 @@ This code has been polished and is not the complete volume of code produced in t
 
 This code must not be used or modified without explicit written consent. 
 
-For enquires, please contact Stella (ze/hir // she/her) at 
+For enquires, please contact Stella (they/them) at 
             [s.knief@uqconnect.edu.au]. 
